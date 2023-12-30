@@ -1,22 +1,6 @@
-import styles from "./index.module.scss";
+import styles from "./Navbar.module.scss";
 import { Link, NavLink } from "react-router-dom";
-import {
-  Flex,
-  Image,
-  Text,
-  Button,
-  Collapse,
-  Box,
-  Drawer,
-  DrawerBody,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerOverlay,
-  DrawerContent,
-  DrawerCloseButton,
-  useDisclosure,
-} from "@chakra-ui/react";
-import { useState } from "react";
+import { Flex, Image, Text, useDisclosure } from "@chakra-ui/react";
 import Menu from "./Menu";
 
 export default function Navbar() {
@@ -24,10 +8,11 @@ export default function Navbar() {
     borderBottom: `2px solid #000`,
     transition: "0.4s",
   };
+
+  const { isOpen, onToggle, onClose } = useDisclosure();
+
   const onActive = ({ isActive }) => (isActive ? onActiveStyle : null);
 
-  // state for Drawer
-  const { isOpen, onToggle, onClose } = useDisclosure();
   return (
     <Flex
       justifyContent="space-between"
@@ -52,7 +37,7 @@ export default function Navbar() {
         </Link>
 
         {!isOpen && (
-          <Flex gap="40px" display={{ base: "none", sm: "none", lg: "flex" }}>
+          <Flex as="nav" gap="40px" display={{ base: "none", sm: "none", lg: "flex" }}>
             <NavLink style={onActive} className={styles.navlink} to="/company">
               Company
             </NavLink>
@@ -73,7 +58,6 @@ export default function Navbar() {
 
         <Flex alignItems="center" gap="7px" cursor="pointer" onClick={onToggle}>
           <Text>{!isOpen ? "Menu" : "Close"}</Text>
-
           <Image
             src={`./assets/imgs/navbar/${!isOpen ? "menu-black" : "close"}.svg`}
           />

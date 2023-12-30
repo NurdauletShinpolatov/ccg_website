@@ -1,2 +1,3 @@
 - store (state management) mobx --> redux toolkit
-- layout durislap shigiw kk (hazirgisi adminka ushin moljellengen)
+- src/pages ishinde har page ushin jsx file ashiladi onin ishinde src/components/pages ishindegi componentler shaqiriladi (Home Page ham about page islengen, sogan qarap islew kk)
+- 

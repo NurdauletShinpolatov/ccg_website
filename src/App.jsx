@@ -6,7 +6,6 @@ import queryClient from "./services/queryClient";
 import { QueryClientProvider } from "react-query";
 import { ReactQueryDevtools } from "react-query/devtools";
 import { BrowserRouter } from "react-router-dom";
-import { useEffect } from "react";
 import PreloaderProvider from "./providers/PreloaderProvider";
 const { ToastContainer, toast } = createStandaloneToast();
 
@@ -24,7 +23,7 @@ function App() {
           </QueryClientProvider>
         </ChakraProvider>
       </div>
-      <ToastContainer />
+      <ToastContainer /> 
     </>
   );
 }
