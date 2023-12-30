@@ -1,13 +1,13 @@
-import styles from "./index.module.scss";
 import { Outlet } from "react-router-dom";
-import { Flex } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Navbar from "components/Navbar";
 
 export default function MainLayout() {
   return (
-    <Flex flexDir="column">
+    <Box>
       <Navbar />
       <Outlet />
-    </Flex>
+			{/* there might be footer */}
+    </Box>
   );
 }
