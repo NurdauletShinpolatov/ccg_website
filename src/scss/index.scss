@@ -1,5 +1,3 @@
-@import "./table.scss";
-@import "./dnd.scss";
 
 html {
   font-size: 0.8rem;
@@ -15,8 +13,4 @@ html {
 
 .css-wtf6ne {
   background-color: #fff !important;
-}
-
-.rc-table .rc-table-head.rc-table-hide-scrollbar::-webkit-scrollbar {
-  width: 20px !important;
 }

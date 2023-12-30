@@ -6,7 +6,6 @@ import ContactUs from "components/pages/ContactUs";
 import Careers from "components/pages/Careers";
 import Certifications from "components/pages/Certifications";
 import News from "components/pages/News";
-import MainLayout from "layouts/MainLayout";
 import Home from "../pages";
 import About from "../pages/about";
 

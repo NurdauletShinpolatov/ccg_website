@@ -28,7 +28,7 @@ const TopNav = ({ isOpen, onToggle }) => {
       </Link>
 
       {!isOpen && (
-        <Flex gap="40px" display={{ base: "none", sm: "none", lg: "flex" }}>
+        <Flex as="nav" gap="40px" display={{ base: "none", sm: "none", lg: "flex" }}>
           {topNavData.map((nav) => (
             <NavLink
               key={nav.title}
