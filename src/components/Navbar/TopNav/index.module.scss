@@ -1,0 +1,14 @@
+.topNav {
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: space-between;
+
+  .navlink {
+    border-bottom: 2px solid transparent;
+  }
+  .menu {
+    cursor: pointer;
+    align-items: center;
+    gap: 7px;
+  }
+}

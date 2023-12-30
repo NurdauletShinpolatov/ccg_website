@@ -11,7 +11,6 @@
   width: 0px;
   height: 2px;
   background: #000;
-  margin-right: 20px;
   transition: 0.2s;
 }
 .menu:hover::before {
@@ -22,6 +21,7 @@
 
 .menuActive {
   font-size: 50px;
+  font-weight: 600;
   color: black;
   position: relative;
   display: flex;
@@ -36,4 +36,43 @@
   background: #000;
   margin-right: 20px;
   transition: 0.2s;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    font-size: 30px;
+  }
+  .menu:before {
+    height: 2px;
+  }
+  .menu:hover::before {
+    width: 60px;
+  }
+  .menuActive {
+    font-size: 30px;
+  }
+  .menuActive::before {
+    width: 60px;
+    height: 2px;
+  }
+}
+@media (max-width: 375px) {
+  .menu {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+  .menu:before {
+    height: 2px;
+  }
+  .menu:hover::before {
+    width: 30px;
+  }
+  .menuActive {
+    font-size: 27px;
+    margin-bottom: 10px;
+  }
+  .menuActive::before {
+    width: 30px;
+    height: 2px;
+  }
 }
