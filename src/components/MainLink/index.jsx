@@ -7,7 +7,7 @@ export default function MainLink({ children, linkTo, color }) {
     <Link className={styles.link} to={linkTo} style={{ color: color }}>
       {children}{" "}
       <Image
-        src={`src/assets/imgs/all/link${color === "black" ? "black" : ""}.png`}
+        src={`./assets/imgs/all/link${color === "black" ? "black" : ""}.png`}
       />
     </Link>
   );
