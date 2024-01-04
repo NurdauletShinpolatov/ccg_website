@@ -11,7 +11,9 @@ export default function Menu({ isOpen, onClose }) {
       in={isOpen}
       transition={{ exit: { duration: 0.4 }, enter: { duration: 0.5 } }}
     >
-      <Flex>
+      <Flex
+        flexDir={{ base: "column-reverse", sm: "column-reverse", lg: "row" }}
+      >
         <Flex
           p={{ base: "20px 0px", sm: "20px 0px", lg: "40px" }}
           color="white"

@@ -1,0 +1,53 @@
+.header {
+  background: linear-gradient(rgba(54, 54, 54, 0.527), rgba(49, 49, 49, 0.5)),
+    url("src/assets/imgs/main/Header/bg_header.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  padding: 50px 20%;
+  gap: 30px;
+
+  .subheading {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 24px;
+    width: 300px;
+  }
+  .heading {
+    color: #fff;
+    font-size: 64px;
+    font-weight: 600;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .header {
+    padding: 50px 20%;
+    gap: 20px;
+
+    .subheading {
+      font-size: 14px;
+    }
+    .heading {
+      font-size: 44px;
+      line-height: 45px;
+    }
+  }
+}
+@media (max-width: 768px) {
+}
+@media (max-width: 426px) {
+  .header {
+    padding: 50px 5%;
+
+    .subheading {
+      font-size: 12px;
+    }
+    .heading {
+      font-size: 40px;
+    }
+  }
+}

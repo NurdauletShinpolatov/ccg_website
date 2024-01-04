@@ -7,14 +7,16 @@ const Navbar = () => {
 
   return (
     <Flex
-      color="#000"
-      background="red"
+      color="white"
+      background={isOpen ? "gray" : "gray"}
+      transition="0.5s"
       padding="42px 7%"
-      position="sticky"
+      position="fixed"
       top="0"
       left="0"
       right="0"
-      maxH="100vh"
+      // maxH="100vh"
+      // h="100vh"
       justifyContent="space-between"
       flexDirection="column"
     >
