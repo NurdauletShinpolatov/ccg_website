@@ -1,8 +1,11 @@
 import { Flex, Image, Box } from "@chakra-ui/react";
 import Article from "components/Article";
+import ContactForm from "components/ContactForm";
 import Header from "components/Header";
+import MainServices from "components/MainServices";
 import MainStatus from "components/MainStatus";
 import MainTitle from "components/MainTitle";
+import SubHeader from "components/SubHeader";
 
 export default function HomePage() {
   return (
@@ -66,6 +69,15 @@ export default function HomePage() {
           </Article>
         </Flex>
       </Flex>
+
+      <MainServices />
+
+      <SubHeader />
+
+      <Flex padding="50px 7%">
+        <MainTitle>Contact us</MainTitle>
+      </Flex>
+      <ContactForm />
     </div>
   );
 }

@@ -1,0 +1,56 @@
+.certifications {
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px 30px;
+    padding: 50px 7%;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 20px;
+      img {
+        width: 100%;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+      }
+      h2 {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 21px; /* 116.667% */
+      }
+      p {
+        color: #000;
+        font-family: Montserrat;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .certifications {
+    .info {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .certifications {
+    .info {
+      grid-template-columns: 1fr;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.contactus {
+  .map {
+    padding: 100px 7%;
+    margin-top: 100px;
+
+    iframe {
+      width: 100%;
+      height: 550px;
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .contactus {
+    .map {
+      padding: 0px;
+      margin-top: 150px;
+    }
+  }
+}

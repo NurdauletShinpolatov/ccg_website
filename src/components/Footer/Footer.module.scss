@@ -1,0 +1,56 @@
+.footer {
+  background: #333;
+  display: flex;
+  padding: 50px 7%;
+  justify-content: space-between;
+  gap: 100px;
+  border-top: 1px solid white;
+
+  //   .logo {
+  //   }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .linkelement {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      h1 {
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        opacity: 0.3;
+      }
+      .linkbox {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        color: #fff;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+
+      .social {
+        display: flex;
+        gap: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .footer {
+    flex-direction: column;
+  }
+}

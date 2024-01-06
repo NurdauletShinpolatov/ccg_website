@@ -7,15 +7,14 @@ import Careers from "components/pages/Careers";
 import Certifications from "components/pages/Certifications";
 import News from "components/pages/News";
 import Home from "../pages";
-import About from "../pages/about";
+import AboutPage from "components/pages/AboutPage";
 
 const Router = () => {
-
   return (
     <Routes>
       <Route path="/" element={<MainLayout />}>
         <Route index element={<Home />} />
-        <Route path="company" element={<About />} />
+        <Route path="company" element={<AboutPage />} />
         <Route path="services" element={<Services />} />
         <Route path="contact-us" element={<ContactUs />} />
         <Route path="careers" element={<Careers />} />
