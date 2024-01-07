@@ -55,14 +55,10 @@ export default function Menu({ isOpen, onClose }) {
         >
           <Image
             w="50px"
-            src="src/assets/imgs/navbar/phone.svg"
+            src="./assets/imgs/navbar/phone.svg"
             cursor="pointer"
           />
-          <Image
-            w="50px"
-            src="src/assets/imgs/navbar/lan.svg"
-            cursor="pointer"
-          />
+          <Image w="50px" src="./assets/imgs/navbar/lan.svg" cursor="pointer" />
         </Flex>
       </Flex>
     </Collapse>
