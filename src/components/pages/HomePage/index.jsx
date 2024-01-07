@@ -11,6 +11,7 @@ export default function HomePage() {
   return (
     <div className="HomePage">
       <Header />
+      
       <MainStatus />
 
       <Flex flexDir="column" padding="50px 7%" gap="50px">

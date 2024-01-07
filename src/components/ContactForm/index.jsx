@@ -51,7 +51,6 @@ export default function ContactForm() {
           focusBorderColor="black"
           fontSize="16px"
           _placeholder={{ color: "black" }}
-          zIndex="-1"
         />
         <Input
           placeholder="Email"
@@ -60,7 +59,6 @@ export default function ContactForm() {
           focusBorderColor="black"
           fontSize="16px"
           _placeholder={{ color: "black" }}
-          zIndex="-1"
         />
         <Input
           type="tel"
@@ -70,7 +68,6 @@ export default function ContactForm() {
           focusBorderColor="black"
           fontSize="16px"
           _placeholder={{ color: "black" }}
-          zIndex="-1"
         />
 
         <div className={styles.address}>
@@ -106,7 +103,6 @@ export default function ContactForm() {
           focusBorderColor="black"
           fontSize="16px"
           _placeholder={{ color: "black" }}
-          zIndex="-1"
         />
         {errors.exampleRequired && <span>This field is required</span>}
 

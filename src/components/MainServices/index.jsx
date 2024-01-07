@@ -1,4 +1,7 @@
 import styles from "./MainServices.module.scss";
+import TruckIcon from "assets/icons/truckIcon";
+import TrainIcon from "assets/icons/trainIcon";
+import ShipIcon from "assets/icons/shipIcon";
 
 export default function MainServices() {
   return (
@@ -12,10 +15,10 @@ export default function MainServices() {
         </p>
 
         <div className={styles.icons}>
-          <img src="src/assets/imgs/main/Services/truck.svg" />
-          <img src="src/assets/imgs/main/Services/ship.svg" />
-          <img src="src/assets/imgs/main/Services/train.svg" />
-          <img src="src/assets/imgs/main/Services/plane.png" />
+          <TruckIcon clr="black" />
+          <TrainIcon />
+          <ShipIcon />
+          <img src="./assets/imgs/main/Services/plane.png" />
         </div>
       </div>
 
@@ -23,7 +26,7 @@ export default function MainServices() {
         <h1>Авто-перевозки</h1>
 
         <div className={styles.icons}>
-          <img src="src/assets/imgs/main/Services/truck.svg" />
+          <TruckIcon clr="black" />
         </div>
       </div>
 
@@ -31,7 +34,7 @@ export default function MainServices() {
         <h1>Морские перевозки</h1>
 
         <div className={styles.icons}>
-          <img src="src/assets/imgs/main/Services/ship.svg" />
+          <ShipIcon />
         </div>
       </div>
 
@@ -39,7 +42,7 @@ export default function MainServices() {
         <h1>Ж/Д перевозки</h1>
 
         <div className={styles.icons}>
-          <img src="src/assets/imgs/main/Services/train.svg" />
+          <TrainIcon />
         </div>
       </div>
 
@@ -47,7 +50,7 @@ export default function MainServices() {
         <h1>Авиа перевозки</h1>
 
         <div className={styles.icons}>
-          <img src="src/assets/imgs/main/Services/plane.png" />
+          <img src="./assets/imgs/main/Services/plane.png" />
         </div>
       </div>
 

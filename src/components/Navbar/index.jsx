@@ -19,6 +19,7 @@ const Navbar = () => {
       // h="100vh"
       justifyContent="space-between"
       flexDirection="column"
+      zIndex="2"
     >
       <TopNav isOpen={isOpen} onToggle={onToggle} />
       <Menu onClose={onClose} isOpen={isOpen} />

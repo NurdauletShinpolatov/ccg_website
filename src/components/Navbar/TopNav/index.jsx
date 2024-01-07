@@ -1,6 +1,9 @@
 import styles from "./index.module.scss";
 import { Flex, Image, Text } from "@chakra-ui/react";
 import { Link, NavLink } from "react-router-dom";
+import LogoIcon from "assets/icons/logoIcon";
+import MenuIcon from "assets/icons/menuIcon";
+import MenuCloseIcon from "assets/icons/menuCloseIcon";
 
 // data for topNav
 const topNavData = [
@@ -21,14 +24,19 @@ const TopNav = ({ isOpen, onToggle }) => {
   return (
     <Flex className={styles.topNav}>
       <Link to="/">
-        <Image
+        {/* <Image
           src="./assets/imgs/navbar/logo-black.svg"
           w={{ sm: "120px", lg: "150px" }}
-        />
+        /> */}
+        <LogoIcon clr="#fff" w="150px" h="25px" />
       </Link>
 
       {!isOpen && (
-        <Flex as="nav" gap="40px" display={{ base: "none", sm: "none", lg: "flex" }}>
+        <Flex
+          as="nav"
+          gap="40px"
+          display={{ base: "none", sm: "none", lg: "flex" }}
+        >
           {topNavData.map((nav) => (
             <NavLink
               key={nav.title}
@@ -47,9 +55,8 @@ const TopNav = ({ isOpen, onToggle }) => {
           {!isOpen ? "Menu" : "Close"}
         </Text>
 
-        <Image
-          src={`./assets/imgs/navbar/${!isOpen ? "menu-black" : "close"}.svg`}
-        />
+        {!isOpen && <MenuIcon clr="#fff" />}
+        {isOpen && <MenuCloseIcon clr="#fff" />}
       </Flex>
     </Flex>
   );

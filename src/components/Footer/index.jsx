@@ -1,11 +1,14 @@
+import LinkedinIcon from "assets/icons/linkedinIcon";
 import styles from "./Footer.module.scss";
 import { Link } from "react-router-dom";
+import FacebookIcon from "assets/icons/facebookIcon";
+import LogoIcon from "assets/icons/logoIcon";
 
 export default function Footer() {
   return (
     <div className={styles.footer}>
       <div className={styles.logo}>
-        <img src="src/assets/imgs/navbar/logo-white.svg" />
+        <LogoIcon clr="white" w="150px" h="25px" />
       </div>
 
       <div className={styles.links}>
@@ -42,10 +45,10 @@ export default function Footer() {
 
           <div className={styles.social}>
             <a>
-              <img src="src/assets/imgs/footer/u_linkedin.svg" />
+              <LinkedinIcon clr="white" />
             </a>
             <a>
-              <img src="src/assets/imgs/footer/u_facebook.svg" />
+              <FacebookIcon clr="white" />
             </a>
           </div>
         </div>

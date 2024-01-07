@@ -1,6 +1,10 @@
 import Title from "components/Title";
 import styles from "./Services.module.scss";
 import ContactForm from "components/ContactForm";
+import TruckIcon from "assets/icons/truckIcon";
+import ShipIcon from "assets/icons/shipIcon";
+import TrainIcon from "assets/icons/trainIcon";
+import ArrowForwardIcon from "assets/icons/arrowForwardIcon";
 
 export default function Services() {
   return (
@@ -17,7 +21,7 @@ export default function Services() {
             yil faoliyat korsatgan biz shun kunchaga 2000 mingdan ortiq xodimlar
             ish korsatgan.
           </p>
-          <img src="./assets/imgs/main/Services/truck.svg" />
+          <TruckIcon clr="black" />
         </div>
 
         <div className={styles.service}>
@@ -29,7 +33,7 @@ export default function Services() {
             ish korsatgan.
           </p>
 
-          <img src="./assets/imgs/main/Services/ship.svg" />
+          <ShipIcon />
         </div>
 
         <div className={styles.service}>
@@ -41,7 +45,7 @@ export default function Services() {
             ish korsatgan.
           </p>
 
-          <img src="./assets/imgs/main/Services/train.svg" />
+          <TrainIcon />
         </div>
 
         <div className={styles.service}>
@@ -62,23 +66,19 @@ export default function Services() {
 
         <div className={styles.linkbox}>
           <p>
-            МУЛЬТИМОДАЛЬНЫЕ ПЕРЕВОЗКИ{" "}
-            <img src="./assets/imgs/services/arrow_forward.svg" />
+            МУЛЬТИМОДАЛЬНЫЕ ПЕРЕВОЗКИ <ArrowForwardIcon />
           </p>
 
           <p>
-            УСЛУГИ ТАМОЖЕННОГО ДЕКЛАРИРОВАНИЯ{" "}
-            <img src="./assets/imgs/services/arrow_forward.svg" />
+            УСЛУГИ ТАМОЖЕННОГО ДЕКЛАРИРОВАНИЯ <ArrowForwardIcon />
           </p>
 
           <p>
-            КВАРТИРНЫЙ ПЕРЕЕЗД{" "}
-            <img src="./assets/imgs/services/arrow_forward.svg" />
+            КВАРТИРНЫЙ ПЕРЕЕЗД <ArrowForwardIcon />
           </p>
 
           <p>
-            КУРЬЕРСКАЯ СЛУЖБА{" "}
-            <img src="./assets/imgs/services/arrow_forward.svg" />
+            КУРЬЕРСКАЯ СЛУЖБА <ArrowForwardIcon />
           </p>
         </div>
 
