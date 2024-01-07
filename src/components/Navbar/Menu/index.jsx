@@ -44,6 +44,9 @@ export default function Menu({ isOpen, onClose }) {
           <NavLink to="/contact-us" onClick={onClose} className={onMenuActive}>
             Contact us
           </NavLink>
+          <NavLink to="/careers" onClick={onClose} className={onMenuActive}>
+            Careers
+          </NavLink>
         </Flex>
         <Flex
           flexDir={{ base: "row", sm: "row", lg: "column" }}

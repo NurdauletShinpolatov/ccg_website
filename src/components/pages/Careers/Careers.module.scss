@@ -1,0 +1,14 @@
+.careers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 50px 7%;
+  gap: 0px;
+  justify-content: center;
+  align-items: center;
+
+  .cardwrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
