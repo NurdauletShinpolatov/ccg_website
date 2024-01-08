@@ -3,7 +3,6 @@ import { Flex, Image, Text } from "@chakra-ui/react";
 import { Link, NavLink } from "react-router-dom";
 import LogoIcon from "assets/icons/logoIcon";
 import MenuIcon from "assets/icons/menuIcon";
-import MenuCloseIcon from "assets/icons/menuCloseIcon";
 
 // data for topNav
 const topNavData = [
@@ -18,17 +17,13 @@ const onActiveStyle = {
   transition: "0.4s",
 };
 
-const TopNav = ({ isOpen, onToggle }) => {
+const TopNav = ({ isOpen, onToggle, setColor, color }) => {
   const onActive = ({ isActive }) => (isActive ? onActiveStyle : null);
 
   return (
     <Flex className={styles.topNav}>
-      <Link to="/">
-        {/* <Image
-          src="./assets/imgs/navbar/logo-black.svg"
-          w={{ sm: "120px", lg: "150px" }}
-        /> */}
-        <LogoIcon clr="#fff" w="150px" h="25px" />
+      <Link to="/" onClick={() => setColor("white")}>
+        <LogoIcon clr={color} w="150px" h="25px" />
       </Link>
 
       {!isOpen && (
@@ -43,6 +38,7 @@ const TopNav = ({ isOpen, onToggle }) => {
               style={onActive}
               className={styles.navlink}
               to={nav.to}
+              onClick={() => setColor("black")}
             >
               {nav.title}
             </NavLink>
@@ -51,12 +47,9 @@ const TopNav = ({ isOpen, onToggle }) => {
       )}
 
       <Flex className={styles.menu} onClick={onToggle}>
-        <Text display={{ base: "none", sm: "none", lg: "flex" }}>
-          {!isOpen ? "Menu" : "Close"}
-        </Text>
+        <Text display={{ base: "none", sm: "none", lg: "flex" }}>Menu</Text>
 
-        {!isOpen && <MenuIcon clr="#fff" />}
-        {isOpen && <MenuCloseIcon clr="#fff" />}
+        <MenuIcon clr={color} />
       </Flex>
     </Flex>
   );

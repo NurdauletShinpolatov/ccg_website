@@ -6,12 +6,15 @@ import MainServices from "components/MainServices";
 import MainStatus from "components/MainStatus";
 import MainTitle from "components/MainTitle";
 import SubHeader from "components/SubHeader";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 export default function HomePage() {
   return (
     <div className="HomePage">
       <Header />
-      
+
       <MainStatus />
 
       <Flex flexDir="column" padding="50px 7%" gap="50px">

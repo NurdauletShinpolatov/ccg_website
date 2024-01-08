@@ -1,9 +1,15 @@
 import MainLink from "components/MainLink";
 import styles from "./Article.module.scss";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
-export default function Article({ txt, children, subtitle, linkTo }) {
+export default function Article({ txt, children, subtitle, linkTo, aos }) {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
-    <div className={styles.article}>
+    <div className={styles.article} data-aos={aos}>
       <p className={styles.txt}>{txt}</p>
 
       <div className={styles.headerBox}>
