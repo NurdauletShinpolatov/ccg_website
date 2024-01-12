@@ -8,19 +8,19 @@ import { Tabs, Tab, TabList, TabIndicator } from "@chakra-ui/react";
 import { useState } from "react";
 
 const teamGallery = [
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery1.png" },
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery2.png" },
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery3.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery1.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery2.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery3.png" },
 ];
 const transportGallery = [
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery3.png" },
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery1.png" },
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery2.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery3.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery1.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery2.png" },
 ];
 const staffGallery = [
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery2.png" },
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery3.png" },
-  { comment: "Jamoa bilan 3 kun", bg: "src/assets/imgs/gallery/gallery1.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery2.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery3.png" },
+  { comment: "Jamoa bilan 3 kun", bg: "./assets/imgs/gallery/gallery1.png" },
 ];
 const tabs = [
   { title: "Jamoa", section: "team" },
