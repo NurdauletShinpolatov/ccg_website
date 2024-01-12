@@ -42,7 +42,7 @@ export default function HomePage() {
             alignItems="center"
             className={styles.imgbox}
           >
-            <ImageBox img="src/assets/imgs/imgcomp/img3.png" />
+            <ImageBox img="./assets/imgs/imgcomp/img3.png" />
           </Flex>
         </div>
 
@@ -53,7 +53,7 @@ export default function HomePage() {
             justifyContent="flex-start"
             alignItems="center"
           >
-            <ImageBox img="src/assets/imgs/imgcomp/img1.png" />
+            <ImageBox img="./assets/imgs/imgcomp/img1.png" />
           </Flex>
 
           <Article

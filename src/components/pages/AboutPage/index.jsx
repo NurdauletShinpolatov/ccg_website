@@ -30,13 +30,13 @@ export default function AboutPage() {
             zIndex="-1"
             className={styles.imgbox}
           >
-            <ImageBox img="src/assets/imgs/imgcomp/img4.png" />
+            <ImageBox img="./assets/imgs/imgcomp/img4.png" />
           </Box>
         </div>
 
         <div className={styles.article}>
           <Box flex="1" position="relative" className={styles.imgbox}>
-            <ImageBox img="src/assets/imgs/imgcomp/img5.png" />
+            <ImageBox img="./assets/imgs/imgcomp/img5.png" />
           </Box>
 
           <Article
@@ -58,7 +58,7 @@ export default function AboutPage() {
           </Article>
 
           <Box flex="1" className={styles.imgbox}>
-            <ImageBox img="src/assets/imgs/imgcomp/img2.png" />
+            <ImageBox img="./assets/imgs/imgcomp/img2.png" />
           </Box>
         </div>
 
@@ -69,7 +69,7 @@ export default function AboutPage() {
             zIndex="-1"
             className={styles.imgbox}
           >
-            <ImageBox img="src/assets/imgs/imgcomp/img1.png" />
+            <ImageBox img="./assets/imgs/imgcomp/img1.png" />
           </Box>
 
           <Article
