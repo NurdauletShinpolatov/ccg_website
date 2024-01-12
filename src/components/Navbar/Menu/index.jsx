@@ -3,37 +3,36 @@ import { NavLink } from "react-router-dom";
 import styles from "./index.module.scss";
 import LogoIcon from "assets/icons/logoIcon";
 import MenuCloseIcon from "assets/icons/menuCloseIcon";
+import { desktopLink } from "utils/constants/constants";
+import { mobileLink } from "utils/constants/constants";
 
-const linkData = [
-  { to: "/", color: "white", title: "Main" },
-  { to: "/company", color: "black", title: "Company" },
-  { to: "/certifications", color: "black", title: "Certifications" },
-  { to: "/news", color: "black", title: "News" },
-  { to: "/services", color: "black", title: "Services" },
-  { to: "/contact-us", color: "black", title: "Contact us" },
-  { to: "/careers", color: "black", title: "Careers" },
-];
-
-export default function Menu({ isOpen, onClose, setColor }) {
+export default function Menu({ isOpen, onClose }) {
   const onMenuActive = ({ isActive }) =>
     isActive ? styles.menuActive : styles.menu;
 
   const onClick = (clr) => {
     onClose();
-    setColor(clr);
   };
   return (
     <Slide
       in={isOpen}
-      // dir="top"
-      style={{ background: "white", zIndex: 10, padding: "50px" }}
+      className={styles.menubar}
       transition={{ exit: { duration: 0.4 }, enter: { duration: 0.5 } }}
     >
-      <Flex justifyContent="space-between" alignItems="center">
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        className={styles.top}
+      >
         <LogoIcon clr="black" w="120px" h="25px" />
 
-        <Flex gap="7px" onClick={onClose} cursor="pointer">
-          <Text color="black" fontSize="16px" fontWeight="600">
+        <Flex gap="7px" onClick={onClose} cursor="pointer" alignItems="center">
+          <Text
+            color="black"
+            fontSize="16px"
+            fontWeight="600"
+            display={{ base: "none", sm: "none", lg: "flex" }}
+          >
             Close
           </Text>
 
@@ -42,21 +41,29 @@ export default function Menu({ isOpen, onClose, setColor }) {
       </Flex>
 
       <Flex
-        flexDir={{ base: "column-reverse", sm: "column-reverse", lg: "row" }}
+        className={styles.bottom}
+        flexDir={{
+          base: "column-reverse",
+          sm: "column-reverse",
+          md: "row",
+          xl: "row",
+        }}
       >
         <Flex
+          className={styles.desktop}
           p={{ base: "20px 0px", sm: "20px 0px", lg: "40px" }}
           color="white"
           rounded="md"
           flexDir="column"
           flex="1"
         >
-          {linkData.map((link) => {
+          {desktopLink.map((link) => {
             return (
               <NavLink
                 to={link.to}
-                onClick={() => onClick(link.color)}
+                onClick={onClose}
                 className={onMenuActive}
+                key={link.to}
               >
                 {link.title}
               </NavLink>
@@ -65,7 +72,29 @@ export default function Menu({ isOpen, onClose, setColor }) {
         </Flex>
 
         <Flex
-          flexDir={{ base: "row", sm: "row", lg: "column" }}
+          p={{ base: "20px 0px", sm: "20px 0px", lg: "40px" }}
+          color="white"
+          rounded="md"
+          flexDir="column"
+          flex="1"
+          className={styles.mobile}
+        >
+          {mobileLink.map((link) => {
+            return (
+              <NavLink
+                to={link.to}
+                onClick={onClose}
+                className={onMenuActive}
+                key={link.to}
+              >
+                {link.title}
+              </NavLink>
+            );
+          })}
+        </Flex>
+
+        <Flex
+          flexDir={{ base: "row", sm: "row", md: "column", xl: "column" }}
           gap="30px"
           shadow="none"
           flex="1"

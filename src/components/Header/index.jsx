@@ -9,9 +9,11 @@ export default function Header() {
         Delivering full construction logistics solutions on large and complex
         projects, with build values of over £1 billion.
       </Heading>
+
       <Heading className={styles.heading}>
         Transceka & egs Construction Logistics
       </Heading>
+
       <MainLink linkTo="/company" color="#fff">
         Find Out More{" "}
       </MainLink>

@@ -8,61 +8,53 @@ import MainTitle from "components/MainTitle";
 import SubHeader from "components/SubHeader";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
+import ImageBox from "components/ImageBox";
+import styles from "./HomePage.module.scss";
 
 export default function HomePage() {
   return (
-    <div className="HomePage">
+    <div className={styles.homepage}>
       <Header />
 
       <MainStatus />
 
-      <Flex flexDir="column" padding="50px 7%" gap="50px">
+      <Flex
+        flexDir="column"
+        padding={{ base: "50px 4%", md: "50px 7%" }}
+        gap="40px"
+      >
         <MainTitle>Kompaniya</MainTitle>
 
-        <Flex
-          justifyContent="space-between"
-          alignItems="center"
-          gap="40px"
-          flexDir={{
-            base: "column",
-            sm: "column",
-            md: "column",
-            lg: "row",
-            xl: "row",
-            "2xl": "row",
-          }}
-        >
+        <div className={styles.section}>
           <Article
             txt="Shapefarm asas aa company company isis builtbuilt uponupon aa uniqueunique breadth breadth pertiseexpertise projthethe world.world."
-            subtitle="We areare hiring!hiring! PleasePlease sendsend youryour applicationapplication withwith aa linklink"
+            subtitle="We are are hiring! hiring! Please Please send send your your application application withwith aa linklink"
             linkTo="/company"
           >
             Dreams <span>into</span> Games
           </Article>
 
-          <Box flex="1" position="relative" zIndex="-1">
-            <Image src="./assets/imgs/main/Article/article2.png" />
-          </Box>
-        </Flex>
+          <Flex
+            flex="1"
+            position="relative"
+            zIndex="-1"
+            justifyContent="flex-start"
+            alignItems="center"
+            className={styles.imgbox}
+          >
+            <ImageBox img="src/assets/imgs/imgcomp/img3.png" />
+          </Flex>
+        </div>
 
-        <Flex
-          justifyContent="space-between"
-          alignItems="center"
-          mt="50px"
-          gap="40px"
-          flexDir={{
-            base: "column-reverse",
-            sm: "column-reverse",
-            md: "column-reverse",
-            lg: "row",
-            xl: "row",
-            "2xl": "row",
-          }}
-        >
-          <Box flex="1">
-            <Image src="./assets/imgs/main/Article/article.png" />
-          </Box>
+        <div className={styles.section}>
+          <Flex
+            flex="1"
+            className={styles.imgbox}
+            justifyContent="flex-start"
+            alignItems="center"
+          >
+            <ImageBox img="src/assets/imgs/imgcomp/img1.png" />
+          </Flex>
 
           <Article
             txt="Shapefarm asas aa company company isis builtbuilt uponupon aa uniqueunique breadth breadth pertiseexpertise projthethe world.world."
@@ -71,14 +63,14 @@ export default function HomePage() {
           >
             Dream <span>village</span> it is yor nimadir
           </Article>
-        </Flex>
+        </div>
       </Flex>
 
       <MainServices />
 
       <SubHeader />
 
-      <Flex padding="50px 7%">
+      <Flex padding={{ base: "20px 4%", md: "20px 7%" }} mt="50px">
         <MainTitle>Contact us</MainTitle>
       </Flex>
       <ContactForm />

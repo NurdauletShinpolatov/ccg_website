@@ -13,7 +13,7 @@ export default function News() {
       <div className={styles.newsmain}>
         {data.map((data) => {
           return (
-            <div className={styles.newsbox}>
+            <div className={styles.newsbox} key={data}>
               <img src="./assets/imgs/news/news.png" />
 
               <div className={styles.newsdata}>

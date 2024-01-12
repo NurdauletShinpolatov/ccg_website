@@ -24,6 +24,7 @@
     }
     .title span {
       border: 1px solid black;
+      padding: 2px;
     }
 
     .subtitleBox {
@@ -47,10 +48,10 @@
 
 @media (max-width: 1024px) {
   .article {
-    gap: 60px;
+    gap: 30px;
 
     .txt {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400;
       line-height: 24px; /* 150% */
     }
@@ -60,21 +61,27 @@
       gap: 30px;
 
       .title {
-        font-size: 64px;
+        font-size: 46px;
         font-weight: 600;
-        line-height: 61px; /* 95.313% */
+        line-height: 55px; /* 95.313% */
+      }
+
+      .subtitleBox {
+        .subtitle {
+          font-size: 14px;
+        }
       }
     }
   }
 }
 @media (max-width: 768px) {
   .article {
-    gap: 60px;
+    gap: 20px;
 
     .txt {
-      font-size: 16px;
+      font-size: 12px;
       font-weight: 400;
-      line-height: 24px; /* 150% */
+      line-height: 14px;
     }
 
     .headerBox {
@@ -82,9 +89,16 @@
       gap: 30px;
 
       .title {
-        font-size: 64px;
+        font-size: 45px;
         font-weight: 600;
-        line-height: 61px; /* 95.313% */
+        line-height: 47px; /* 95.313% */
+      }
+
+      .subtitleBox {
+        .subtitle {
+          font-size: 13px;
+          line-height: 16px;
+        }
       }
     }
   }
@@ -106,7 +120,7 @@
       .title {
         font-size: 44px;
         font-weight: 600;
-        line-height: 41px; /* 95.313% */
+        line-height: 48px; /* 95.313% */
       }
     }
   }

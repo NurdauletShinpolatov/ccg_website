@@ -2,6 +2,8 @@ import styles from "./AboutPage.module.scss";
 import Title from "components/Title";
 import Article from "components/Article";
 import { Flex, Image, Box } from "@chakra-ui/react";
+import ImageBox from "components/ImageBox";
+import Gallery from "components/Gallery";
 
 export default function AboutPage() {
   return (
@@ -13,19 +15,7 @@ export default function AboutPage() {
       </Title>
 
       <Flex flexDir="column" padding="50px 7%" gap="50px">
-        <Flex
-          justifyContent="space-between"
-          alignItems="center"
-          gap="40px"
-          flexDir={{
-            base: "column",
-            sm: "column",
-            md: "column",
-            lg: "row",
-            xl: "row",
-            "2xl": "row",
-          }}
-        >
+        <div className={styles.article}>
           <Article
             txt="Shapefarm asas aa company company isis builtbuilt uponupon aa uniqueunique breadth breadth pertiseexpertise projthethe world.world."
             subtitle="We areare hiring!hiring! PleasePlease sendsend youryour applicationapplication withwith aa linklink"
@@ -34,27 +24,19 @@ export default function AboutPage() {
             Dreams <span>into</span> Games
           </Article>
 
-          <Box flex="1" position="relative" zIndex="-1">
-            <Image src="./assets/imgs/main/Article/article2.png" />
+          <Box
+            flex="1"
+            position="relative"
+            zIndex="-1"
+            className={styles.imgbox}
+          >
+            <ImageBox img="src/assets/imgs/imgcomp/img4.png" />
           </Box>
-        </Flex>
+        </div>
 
-        <Flex
-          justifyContent="space-between"
-          alignItems="center"
-          mt="50px"
-          gap="40px"
-          flexDir={{
-            base: "column-reverse",
-            sm: "column-reverse",
-            md: "column-reverse",
-            lg: "row",
-            xl: "row",
-            "2xl": "row",
-          }}
-        >
-          <Box flex="1">
-            <Image src="./assets/imgs/main/Article/article.png" />
+        <div className={styles.article}>
+          <Box flex="1" position="relative" className={styles.imgbox}>
+            <ImageBox img="src/assets/imgs/imgcomp/img5.png" />
           </Box>
 
           <Article
@@ -64,22 +46,9 @@ export default function AboutPage() {
           >
             Dream <span>village</span> it is yor nimadir
           </Article>
-        </Flex>
+        </div>
 
-        <Flex
-          justifyContent="space-between"
-          alignItems="center"
-          mt="50px"
-          gap="40px"
-          flexDir={{
-            base: "column-reverse",
-            sm: "column-reverse",
-            md: "column-reverse",
-            lg: "row",
-            xl: "row",
-            "2xl": "row",
-          }}
-        >
+        <div className={styles.article}>
           <Article
             txt="Shapefarm asas aa company company isis builtbuilt uponupon aa uniqueunique breadth breadth pertiseexpertise projthethe world.world."
             subtitle="We areare hiring!hiring! PleasePlease sendsend youryour applicationapplication withwith aa linklink"
@@ -88,26 +57,19 @@ export default function AboutPage() {
             Dream <span>village</span> it is yor nimadir
           </Article>
 
-          <Box flex="1">
-            <Image src="./assets/imgs/main/Article/article.png" />
+          <Box flex="1" className={styles.imgbox}>
+            <ImageBox img="src/assets/imgs/imgcomp/img2.png" />
           </Box>
-        </Flex>
+        </div>
 
-        <Flex
-          justifyContent="space-between"
-          alignItems="center"
-          gap="40px"
-          flexDir={{
-            base: "column",
-            sm: "column",
-            md: "column",
-            lg: "row",
-            xl: "row",
-            "2xl": "row",
-          }}
-        >
-          <Box flex="1" position="relative" zIndex="-1">
-            <Image src="./assets/imgs/main/Article/article2.png" />
+        <div className={styles.article}>
+          <Box
+            flex="1"
+            position="relative"
+            zIndex="-1"
+            className={styles.imgbox}
+          >
+            <ImageBox img="src/assets/imgs/imgcomp/img1.png" />
           </Box>
 
           <Article
@@ -117,8 +79,10 @@ export default function AboutPage() {
           >
             Dreams <span>into</span> Games
           </Article>
-        </Flex>
+        </div>
       </Flex>
+
+      <Gallery />
     </div>
   );
 }

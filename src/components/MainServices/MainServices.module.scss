@@ -60,6 +60,14 @@
 }
 
 @media (max-width: 1024px) {
+  .wrapper {
+    grid-template-columns: 1fr 1fr;
+
+    .links {
+      grid-column-start: auto;
+      grid-row-start: auto;
+    }
+  }
 }
 
 @media (max-width: 768px) {
@@ -73,7 +81,7 @@
   }
 }
 
-@media (max-width: 426px) {
+@media (max-width: 550px) {
   .wrapper {
     grid-template-columns: 1fr;
     gap: 10px;

@@ -1,14 +1,31 @@
 .careers {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 50px 7%;
-  gap: 0px;
+  padding: 200px 7% 0px 7%;
+  gap: 60px;
   justify-content: center;
   align-items: center;
+  margin-bottom: 200px;
 
   .cardwrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media (max-width: 1025px) {
+  .careers {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 769px) {
+  .careers {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 426px) {
+  .careers {
+    grid-template-columns: 1fr;
   }
 }

@@ -16,9 +16,9 @@ export default function Footer() {
           <h1>Services</h1>
 
           <div className={styles.linkbox}>
-            <Link>Asosiy</Link>
-            <Link>Biz haqimizda</Link>
-            <Link>Contact us</Link>
+            <Link to="/">Asosiy</Link>
+            <Link to="/company">Biz haqimizda</Link>
+            <Link to="/contact-us">Contact us</Link>
           </div>
         </div>
 
@@ -26,8 +26,8 @@ export default function Footer() {
           <h1>Kompaniya</h1>
 
           <div className={styles.linkbox}>
-            <Link>Sertifikat</Link>
-            <Link>Yangiliklar</Link>
+            <Link to="/certification">Sertifikat</Link>
+            <Link to="news">Yangiliklar</Link>
           </div>
         </div>
 

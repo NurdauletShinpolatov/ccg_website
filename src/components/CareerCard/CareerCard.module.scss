@@ -1,8 +1,8 @@
 .careercard {
-  width: 300px;
-  height: 450px;
-  margin-top: 200px;
-  padding: 15px;
+  width: 80%;
+  height: 550px;
+  // margin-top: 200px;
+  padding: 25px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -23,16 +23,17 @@
     p {
       color: #fff;
       font-family: Montserrat;
-      font-size: 16px;
+      font-size: 20px;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+      width: 70%;
     }
 
     h1 {
       color: #fff;
       font-family: Montserrat;
-      font-size: 23px;
+      font-size: 35px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -44,6 +45,61 @@
       border: 2px solid white;
       border-radius: 100%;
       display: inline-block;
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .careercard {
+    width: 100%;
+    height: 550px;
+    .content {
+      p {
+        font-size: 16px;
+        width: 90%;
+      }
+      h1 {
+        font-size: 30px;
+        width: 100%;
+      }
+      .uangle {
+        padding: 5px;
+      }
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .careercard {
+    width: 100%;
+    height: 500px;
+
+    .content {
+      p {
+        font-size: 20px;
+        width: 70%;
+      }
+      h1 {
+        font-size: 40px;
+        width: 80%;
+      }
+    }
+  }
+}
+
+@media (max-width: 426px) {
+  .careercard {
+    height: 400px;
+    .content {
+      p {
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 30px;
+      }
+      .uangle {
+        padding: 3px;
+      }
     }
   }
 }

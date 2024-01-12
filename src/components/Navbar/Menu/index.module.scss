@@ -1,5 +1,21 @@
+.menubar {
+  background: white;
+  z-index: 10;
+  padding: 50px 7% 0px 7%;
+
+  .bottom {
+    padding-left: 7%;
+    padding-top: 2%;
+    // flex-direction: row;
+
+    .mobile {
+      display: none;
+    }
+  }
+}
+
 .menu {
-  font-size: 50px;
+  font-size: 54px;
   color: black;
   position: relative;
   display: flex;
@@ -20,7 +36,7 @@
 }
 
 .menuActive {
-  font-size: 50px;
+  font-size: 54px;
   font-weight: 600;
   color: black;
   position: relative;
@@ -38,9 +54,29 @@
   transition: 0.2s;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1025px) {
+}
+
+@media (max-width: 769px) {
+  .menubar {
+    padding: 50px;
+
+    .bottom {
+      padding-left: 0px;
+      padding-top: 0px;
+
+      .desktop {
+        display: none;
+      }
+
+      .mobile {
+        display: flex;
+      }
+    }
+  }
+
   .menu {
-    font-size: 30px;
+    font-size: 45px;
   }
   .menu:before {
     height: 2px;
@@ -49,14 +85,14 @@
     width: 60px;
   }
   .menuActive {
-    font-size: 30px;
+    font-size: 45px;
   }
   .menuActive::before {
     width: 60px;
     height: 2px;
   }
 }
-@media (max-width: 375px) {
+@media (max-width: 426px) {
   .menu {
     font-size: 27px;
     margin-bottom: 10px;

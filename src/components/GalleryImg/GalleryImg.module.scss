@@ -1,0 +1,20 @@
+.galleryimg {
+  height: 360px;
+  background-size: cover;
+  position: relative;
+
+  .comment {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+
+    p {
+      color: #fff;
+      font-family: Montserrat;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+    }
+  }
+}

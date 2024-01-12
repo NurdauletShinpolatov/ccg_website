@@ -1,0 +1,40 @@
+.homepage {
+  .section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    flex-direction: row;
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 1025px) {
+  .homepage {
+    .section {
+      gap: 40px;
+      flex-direction: row;
+    }
+  }
+}
+@media (max-width: 769px) {
+  .homepage {
+    .section {
+      gap: 40px;
+      flex-direction: row;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .homepage {
+    .section {
+      gap: 40px;
+      flex-direction: column;
+
+      .imgbox {
+        order: 1;
+      }
+    }
+  }
+}
